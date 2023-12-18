@@ -1,4 +1,4 @@
-Feature: Hoeffner Website
+Feature: User can login with the correct email and password
 
   Background:
     Given I go to the "Hoeffner login page"
