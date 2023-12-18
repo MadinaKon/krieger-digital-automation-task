@@ -10,12 +10,14 @@ import WildCard from "../objects/wildcard.js";
 
 const GooglePage = require("../pages/google.page");
 const HoeffnerPage = require("../pages/hoeffner.page.js");
+const LoginPage = require("../pages/login.page.js");
 
 cy.pageMap = {};
 
 const PAGEMAP = {
   "google page": GooglePage,
-  "Hoeffner page": HoeffnerPage,
+  "Hoeffner homepage": HoeffnerPage,
+  "Hoeffner login page": LoginPage,
 };
 
 cy.pageMap.getPageByDescription = (pageDescription) => {

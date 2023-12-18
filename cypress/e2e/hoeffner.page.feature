@@ -1,8 +1,8 @@
 Feature: Hoeffner Website
 
   Background:
-    Given I go to the "Hoeffner page"
-    And I am on the "Hoeffner page"
+    Given I go to the "Hoeffner homepage"
+    And I am on the "Hoeffner homepage"
 
   @regression
   Scenario Outline: User can navigate to Hoeffner website

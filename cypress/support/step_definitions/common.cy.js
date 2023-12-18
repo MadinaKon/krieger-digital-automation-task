@@ -53,7 +53,6 @@ Then(
 );
 
 Then(/^I see that the url matches the "(.*)" url$/, function (pageDescription) {
-  console.log("pageDescription ", pageDescription);
   cy.url().should("match", cy.pageMap.getPageRegExp(pageDescription));
   cy.scope.currentPage = pageDescription;
   cy.scope.currentPageObject = cy.pageMap.getPageByDescription(pageDescription);
