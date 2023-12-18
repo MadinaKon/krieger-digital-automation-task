@@ -14,3 +14,18 @@ Feature: Hoeffner Website
       | searchTerm    |
       | Tischlampe    |
       | Handtuch      |
+
+  @smoke
+  Scenario: User can navigate to Hoeffner website
+    And I click the "cookie accept button"
+    And I type "Handtuch" into the "search input field"
+    Then I see the "search result text"
+    And I see that the url matches the "suche?anfrage=handtuch" url
+
+
+    Examples:
+      | searchTerm    |
+      | Tischlampe    |
+      | Handtuch      |
+
+      
