@@ -52,14 +52,9 @@ Then(
   }
 );
 
-// Then(/^I see that the url matches the "(.*)" url$/, function (pageDescription) {
-//   cy.url().should("contain", cy.pageMap.getPageRegExp(pageDescription));
-//   cy.scope.currentPage = pageDescription;
-//   cy.scope.currentPageObject = cy.pageMap.getPageByDescription(pageDescription);
-// });
-
 Then(/^I see that the url matches the "(.*)" url$/, function (pageDescription) {
-  cy.url().should("match", cy.pageMap.getPageRegExp(pageDescription));
+  // TODO match or contain?
+  cy.url().should("contain", cy.pageMap.getPageRegExp(pageDescription));
   cy.scope.currentPage = pageDescription;
   cy.scope.currentPageObject = cy.pageMap.getPageByDescription(pageDescription);
 });
