@@ -1,12 +1,6 @@
 const Page = require("./Page");
 
 class LoginPage extends Page {
-  //   constructor() {
-  //     super();
-  //     this.url = "https://www.hoeffner.de/login";
-  //     this.email = "";
-  //   }
-
   get path() {
     return `https://www.hoeffner.de/login`;
   }
@@ -29,6 +23,22 @@ class LoginPage extends Page {
       //     ".headerBrand__element--login > .headerElement > .headerElement__link > .headerElement__icon"
       //   );
       return cy.get(".headerElement__link--login");
+    },
+    "login error text": () => {
+      return cy.get("#loginEmail-error");
+    },
+    "forgot password link": () => {
+      return cy.get(".existingAccount__forgotten");
+    },
+    "forgot password input field": () => {
+      return cy.get('[data-testid="passwordForgottenEmailInput"]');
+    },
+    "forgot password submit button": () => {
+      return cy.get('[data-testid="passwordForgottenSubmitId"]');
+    },
+
+    "forget password successful message": () => {
+      return cy.get(".checkMailbox__text--green");
     },
   };
 }

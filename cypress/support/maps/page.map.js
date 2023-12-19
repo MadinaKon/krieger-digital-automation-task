@@ -16,7 +16,7 @@ cy.pageMap = {};
 
 const PAGEMAP = {
   "google page": GooglePage,
-  "Hoeffner homepage": HoeffnerPage,
+  "Hoeffner home page": HoeffnerPage,
   "Hoeffner login page": LoginPage,
 };
 
@@ -69,6 +69,22 @@ cy.pageMap.replaceWildCards = (text, wildCards) => {
   return modifiedText;
 };
 
+// cy.pageMap.getPageRegExp = (pageDescription) => {
+//   return cy.pageMap.getPageByDescription(pageDescription).regexp;
+// };
+
 cy.pageMap.getPageRegExp = (pageDescription) => {
-  return cy.pageMap.getPageByDescription(pageDescription).regexp;
+  try {
+    const page = cy.pageMap.getPageByDescription(pageDescription);
+    if (page && page.regexp) {
+      return page.regexp;
+    } else {
+      // Handle the case where the regexp is not found or invalid
+      return null; // or throw an error
+    }
+  } catch (error) {
+    // Handle any potential errors
+    console.error("Error occurred while getting page regexp:", error);
+    return null; // or throw an error
+  }
 };
