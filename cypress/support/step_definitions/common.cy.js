@@ -20,7 +20,7 @@ Then(/^The "(tab title)" is in "(.*)"$/, function (element, language) {
 When(
   /^I click the "(.* button|.* input field|.* mask|.* link)"$/,
   function (selectorIdentifier) {
-    cy.helper.getElement(selectorIdentifier).click();
+    cy.helper.getElement(selectorIdentifier).click({ force: true });
   }
 );
 
@@ -57,7 +57,6 @@ Then(
 //   cy.scope.currentPage = pageDescription;
 //   cy.scope.currentPageObject = cy.pageMap.getPageByDescription(pageDescription);
 // });
-
 
 Then(/^I see that the url matches the "(.*)" url$/, function (pageDescription) {
   cy.url().should("contain", cy.pageMap.getPageRegExp(pageDescription));
