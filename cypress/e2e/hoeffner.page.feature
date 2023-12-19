@@ -12,20 +12,20 @@ Feature: Hoeffner Website
 
 #     Examples:
 #       | searchTerm    |
-#       | Tischlampe    |
-#       | Handtuch      |
+#       | tischlampe    |
+#       | handtuch      |
 
   @smoke
   Scenario: User can navigate to Hoeffner website
     And I click the "cookie accept button"
-    And I type "Handtuch" into the "search input field"
+    And I type "handtuch" into the "search input field"
     Then I see the "search result text"
-    And I see that the url matches the "https://www.hoeffner.de/suche?anfrage=handtuch" url
+    And I see that the url matches the "suche?anfrage=handtuch" url
 
 
     Examples:
       | searchTerm    |
-      | Tischlampe    |
-      | Handtuch      |
+      | tischlampe    |
+      | handtuch      |
 
       

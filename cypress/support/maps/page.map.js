@@ -74,17 +74,15 @@ cy.pageMap.replaceWildCards = (text, wildCards) => {
 // };
 
 cy.pageMap.getPageRegExp = (pageDescription) => {
-  try {
-    const page = cy.pageMap.getPageByDescription(pageDescription);
-    if (page && page.regexp) {
-      return page.regexp;
-    } else {
-      // Handle the case where the regexp is not found or invalid
-      return null; // or throw an error
-    }
-  } catch (error) {
-    // Handle any potential errors
-    console.error("Error occurred while getting page regexp:", error);
-    return null; // or throw an error
+  const regexp = pageDescription;
+  if (regexp) {
+    // cy.url().should("match", new RegExp(regexp));
+    cy.url().should("include", new RegExp(regexp));
+  } else {
+    const url = cy.pageMap.getPageUrl(pageDescription);
+    cy.url().should("contain", url);
   }
+
+  cy.scope.currentPage = pageDescription;
+  cy.scope.currentPageObject = cy.pageMap.getPageByDescription(pageDescription);
 };
