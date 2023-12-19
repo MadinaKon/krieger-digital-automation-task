@@ -74,15 +74,13 @@ cy.pageMap.replaceWildCards = (text, wildCards) => {
 // cy.pageMap.getPageRegExp = (pageDescription) => {
 //   return cy.pageMap.getPageByDescription(pageDescription).regexp;
 // };
-
 cy.pageMap.getPageRegExp = (pageDescription) => {
-  const regexp = pageDescription;
-  if (regexp) {
-    //  cy.url().should("match", new RegExp(regexp));
-    cy.url().should("include", new RegExp(regexp));
-  } else {
+  if (pageDescription === undefined && pageDescription === null) {
     const url = cy.pageMap.getPageUrl(pageDescription);
     cy.url().should("contain", url);
+  } else {
+    cy.url().should("include", pageDescription);
+    // cy.url().should("match", new RegExp(pageDescription));
   }
 
   cy.scope.currentPage = pageDescription;

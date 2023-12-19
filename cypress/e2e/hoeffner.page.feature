@@ -9,10 +9,10 @@ Feature: Hoeffner Website
   Scenario Outline: User can navigate to Hoeffner website and search for a product
     And I type "<searchTerm>" into the "search input field"
     Then I see the "search result text"
-    # And I see that the url matches the "suche?anfrage=handtuch" url
+   And I see that the url matches the "<searchResult>" url
 
     Examples:
-      | searchTerm    |
-      | tischlampe    |
-      | handtuch      |
+      | searchTerm    |searchResult            |
+      | tischlampe    |suche?anfrage=tischlampe|
+      | handtuch      |suche?anfrage=handtuch  |
       
