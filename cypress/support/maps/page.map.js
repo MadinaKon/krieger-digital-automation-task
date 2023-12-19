@@ -78,7 +78,7 @@ cy.pageMap.replaceWildCards = (text, wildCards) => {
 cy.pageMap.getPageRegExp = (pageDescription) => {
   const regexp = pageDescription;
   if (regexp) {
-    // cy.url().should("match", new RegExp(regexp));
+    //  cy.url().should("match", new RegExp(regexp));
     cy.url().should("include", new RegExp(regexp));
   } else {
     const url = cy.pageMap.getPageUrl(pageDescription);

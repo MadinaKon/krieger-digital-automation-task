@@ -27,9 +27,6 @@ class LoginPage extends Page {
     "forgot password input field": () => {
       return cy.get('[data-testid="passwordForgottenEmailInput"]');
     },
-    "forgot password submit button": () => {
-      return cy.get('[data-testid="passwordForgottenSubmitId"]');
-    },
 
     "forget password successful message": () => {
       return cy.get(".checkMailbox__text--green");
