@@ -74,15 +74,15 @@ cy.pageMap.replaceWildCards = (text, wildCards) => {
 // cy.pageMap.getPageRegExp = (pageDescription) => {
 //   return cy.pageMap.getPageByDescription(pageDescription).regexp;
 // };
-cy.pageMap.getPageRegExp = (pageDescription) => {
-  if (pageDescription === undefined && pageDescription === null) {
-    const url = cy.pageMap.getPageUrl(pageDescription);
-    cy.url().should("contain", url);
-  } else {
-    cy.url().should("include", pageDescription);
-    // cy.url().should("match", new RegExp(pageDescription));
-  }
+// cy.pageMap.getPageRegExp = (pageDescription) => {
+//   if (pageDescription === undefined && pageDescription === null) {
+//     const url = cy.pageMap.getPageUrl(pageDescription);
+//     cy.url().should("contain", url);
+//   } else {
+//     cy.url().should("include", pageDescription);
+//     // cy.url().should("match", new RegExp(pageDescription));
+//   }
 
-  cy.scope.currentPage = pageDescription;
-  cy.scope.currentPageObject = cy.pageMap.getPageByDescription(pageDescription);
-};
+//   cy.scope.currentPage = pageDescription;
+//   cy.scope.currentPageObject = cy.pageMap.getPageByDescription(pageDescription);
+// };

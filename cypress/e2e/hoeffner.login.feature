@@ -28,5 +28,5 @@ Feature: User can login with the correct email and password
     And I see the "forgot password input field"
     And I type "azu@htw-berlin.de" into the "forgot password input field"
     And I see the "forget password successful message"
-   # And I see that the url matches the "passwortMail/gesendet" url
+    And I see that the url matches the "passwortMail/gesendet" url
     
