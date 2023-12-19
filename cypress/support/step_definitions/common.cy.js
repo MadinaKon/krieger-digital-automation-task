@@ -24,13 +24,6 @@ When(
   }
 );
 
-// When(
-//   /^I type "(.*)" into the "(.* input field|.* mask|.* dropdown)"?$/,
-//   function (text, selectorIdentifier) {
-//     cy.helper.getElement(selectorIdentifier).type(text + "{enter}");
-//   }
-// );
-
 When(
   /^I type "(.*)" into the "(.* input field|.* mask|.* dropdown)"?$/,
   function (text, selectorIdentifier) {
@@ -64,4 +57,21 @@ Then(/^I see that the url matches the "(.*)" url$/, function (pageDescription) {
 
   cy.scope.currentPage = pageDescription;
   cy.scope.currentPageObject = cy.pageMap.getPageByDescription(pageDescription);
+});
+
+When(/^I click the "(.*)"$ from the list"$/, function (product) {
+  cy.helper.getElement(selectorIdentifier).click({ force: true });
+});
+
+When(/^I should see products in the catalog/, function () {
+  const productListSelector = cy.get(".search__productContent");
+  const productList = cy.helper.getElement(productListSelector);
+
+  if (!productList) {
+    cy.log("Product list element not found");
+    return;
+  }
+
+  productList.should("be.visible");
+  productList.should("have.length.greaterThan", 0);
 });

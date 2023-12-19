@@ -30,4 +30,6 @@ Feature: Existing user can buy a product successfully
     # And I type "j4!2zZrvDhhNX99" into the "login password input field"
   #  Then I click the "login submit button"
      And I type "handtuch" into the "search input field"
-     Then I see the "search result text"
+    Then I see the "search result text"
+    And I should see products in the catalog
+   # Then I click the "product" from the list
