@@ -22,7 +22,11 @@ class LoginPage extends Page {
       //   return cy.get(
       //     ".headerBrand__element--login > .headerElement > .headerElement__link > .headerElement__icon"
       //   );
-      return cy.get(".headerElement__link--login");
+      // return cy.get(".headerElement__link--login");
+      // return cy.get("span.headerElement__icon.headerElement__icon--login");
+      return cy.xpath(
+        '//span[contains(@class, "headerElement__icon") and contains(@class, "headerElement__icon--login")]'
+      );
     },
     "login error text": () => {
       return cy.get("#loginEmail-error");
