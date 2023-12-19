@@ -11,6 +11,7 @@ import WildCard from "../objects/wildcard.js";
 const GooglePage = require("../pages/google.page");
 const HoeffnerPage = require("../pages/hoeffner.page.js");
 const LoginPage = require("../pages/login.page.js");
+const UserAccountPage = require("../pages/userAccount.page.js");
 
 cy.pageMap = {};
 
@@ -18,6 +19,7 @@ const PAGEMAP = {
   "google page": GooglePage,
   "Hoeffner home page": HoeffnerPage,
   "Hoeffner login page": LoginPage,
+  "Hoeffner account page": UserAccountPage,
 };
 
 cy.pageMap.getPageByDescription = (pageDescription) => {

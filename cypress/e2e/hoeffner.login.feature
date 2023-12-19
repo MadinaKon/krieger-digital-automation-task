@@ -10,9 +10,8 @@ Feature: User can login with the correct email and password
     And I type "s0539452@htw-berlin.de" into the "login email input field"
     And I type "j4!2zZrvDhhNX99" into the "login password input field"
     Then I click the "login submit button"
-    # When I click the "person icon"
-    Then I click the "person icon"
-    And user can see "Hallo, José Maurinho Taras"
+    And I go to the "Hoeffner account page"
+    Then I see the "account overview headline"
     
   # @regression
   # Scenario: Login with invalid credentials
