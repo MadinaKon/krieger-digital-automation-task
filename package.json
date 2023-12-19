@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "cy:silent-prod": "npx cypress run --browser chrome",
-    "cy:editor-prod": "npx cypress open"
+    "cy:editor-prod": "npx cypress open",
+    "e2e": "cypress open --e2e --browser chrome"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
     "cypress-plugin-tab": "1.0.5",
     "cypress-real-events": "1.10.3",
     "prettier-json": "1.0.0",
+    "start-server-and-test": "^2.0.3",
     "typescript": "5.1.6"
   }
 }
