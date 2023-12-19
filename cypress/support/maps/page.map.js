@@ -12,6 +12,7 @@ const GooglePage = require("../pages/google.page");
 const HoeffnerPage = require("../pages/hoeffner.page.js");
 const LoginPage = require("../pages/login.page.js");
 const UserAccountPage = require("../pages/userAccount.page.js");
+const HoeffnerCatalogPage = require("../pages/hoeffner.catalog.js");
 
 cy.pageMap = {};
 
@@ -20,6 +21,7 @@ const PAGEMAP = {
   "Hoeffner home page": HoeffnerPage,
   "Hoeffner login page": LoginPage,
   "Hoeffner account page": UserAccountPage,
+  "Hoeffner catalog page": HoeffnerCatalogPage,
 };
 
 cy.pageMap.getPageByDescription = (pageDescription) => {

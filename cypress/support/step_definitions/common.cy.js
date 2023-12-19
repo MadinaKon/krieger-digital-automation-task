@@ -24,6 +24,13 @@ When(
   }
 );
 
+// When(
+//   /^I type "(.*)" into the "(.* input field|.* mask|.* dropdown)"?$/,
+//   function (text, selectorIdentifier) {
+//     cy.helper.getElement(selectorIdentifier).type(text + "{enter}");
+//   }
+// );
+
 When(
   /^I type "(.*)" into the "(.* input field|.* mask|.* dropdown)"?$/,
   function (text, selectorIdentifier) {
