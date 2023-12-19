@@ -32,4 +32,9 @@ Feature: Existing user can buy a product successfully
      And I type "handtuch" into the "search input field"
     Then I see the "search result text"
     And I should see products in the catalog
-   # Then I click the "product" from the list
+    And following products are added to the cart
+    |ArticleNumber                |Qty|
+    |10828141                     |1  |
+   # |11823881                     |1  |
+   And I see that the url matches the "artikel/10828141" url
+ 

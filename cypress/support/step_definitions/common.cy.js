@@ -75,3 +75,21 @@ When(/^I should see products in the catalog/, function () {
   productList.should("be.visible");
   productList.should("have.length.greaterThan", 0);
 });
+
+When(/^following products are added to the cart/, function (dataTable) {
+  let propValue;
+  dataTable.hashes().forEach((elem) => {
+    for (let propName in elem) {
+      propValue = elem[propName];
+
+      cy.log(propName, propValue);
+    }
+  });
+
+  dataTable.hashes().forEach((elem) => {
+    const selectedProduct = elem.ArticleNumber;
+    const getEl = `[data-article-number="${selectedProduct}"]`;
+
+    cy.get(getEl).click();
+  });
+});
