@@ -20,6 +20,7 @@ Then(/^The "(tab title)" is in "(.*)"$/, function (element, language) {
 When(
   /^I click the "(.* button|.* input field|.* mask|.* link)"$/,
   function (selectorIdentifier) {
+    cy.log(`Clicked on element with identifier: ${selectorIdentifier}`);
     cy.helper.getElement(selectorIdentifier).click({ force: true });
   }
 );
@@ -57,10 +58,6 @@ Then(/^I see that the url matches the "(.*)" url$/, function (pageDescription) {
 
   cy.scope.currentPage = pageDescription;
   cy.scope.currentPageObject = cy.pageMap.getPageByDescription(pageDescription);
-});
-
-When(/^I click the "(.*)"$ from the list"$/, function (product) {
-  cy.helper.getElement(selectorIdentifier).click({ force: true });
 });
 
 When(/^I should see products in the catalog/, function () {

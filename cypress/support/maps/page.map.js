@@ -14,6 +14,9 @@ const LoginPage = require("../pages/login.page.js");
 const UserAccountPage = require("../pages/userAccount.page.js");
 const HoeffnerCatalogPage = require("../pages/hoeffner.catalog.js");
 const HoeffnerProductDetailPage = require("../pages/hoeffner.productDetailPage.js");
+// const HoeffnerShoppingCartPage = require("../pages/hoeffner.shoppingCartPage.js");
+
+const HoeffnerShoppingCartPage = require("../pages/hoeffner.shoppingCartPage.js");
 
 cy.pageMap = {};
 
@@ -24,6 +27,7 @@ const PAGEMAP = {
   "Hoeffner account page": UserAccountPage,
   "Hoeffner catalog page": HoeffnerCatalogPage,
   "Hoeffner product detail page": HoeffnerProductDetailPage,
+  "Hoeffner shopping cart page": HoeffnerShoppingCartPage,
 };
 
 cy.pageMap.getPageByDescription = (pageDescription) => {

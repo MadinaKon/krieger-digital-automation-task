@@ -23,9 +23,6 @@ Feature: Existing user can buy a product successfully
 #       | searchTerm    |searchResult            |
 #       | handtuch      |suche?anfrage=handtuch  |
 
-#   @regression
-#   Scenario: Add product from the product detail page
-
 
   @regression
   Scenario: Add product to the cart from a homepage
@@ -43,6 +40,12 @@ Feature: Existing user can buy a product successfully
     And I am on the "Hoeffner product detail page"
    # And I see that the url matches the "artikel/10828141" url
     And I click the "add to cart button"
+    And I click the "go to cart button"
 
-   
- 
+    
+   # And I am on the "Hoeffner shopping cart page"
+   # And I see that the url matches the "warenkorb" url
+   # Then I see the "cart overview summary"
+
+  #  And I click the "go to the checkout"
+   # And I see that the url matches the "bestellung/login" url
