@@ -23,8 +23,12 @@ Feature: Existing user can buy a product successfully
 #       | searchTerm    |searchResult            |
 #       | handtuch      |suche?anfrage=handtuch  |
 
+#   @regression
+#   Scenario: Add product from the product detail page
+
+
   @regression
-  Scenario: Login with valid credentials
+  Scenario: Add product to the cart from a homepage
    
     # And I type "s0539452@htw-berlin.de" into the "login email input field"
     # And I type "j4!2zZrvDhhNX99" into the "login password input field"
@@ -36,5 +40,9 @@ Feature: Existing user can buy a product successfully
     |ArticleNumber                |Qty|
     |10828141                     |1  |
    # |11823881                     |1  |
-   And I see that the url matches the "artikel/10828141" url
+    And I am on the "Hoeffner product detail page"
+   # And I see that the url matches the "artikel/10828141" url
+    And I click the "add to cart button"
+
+   
  

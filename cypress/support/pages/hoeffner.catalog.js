@@ -19,6 +19,9 @@ class HoeffnerCatalogPage extends Page {
     "first product in the list": () => {
       return cy.get('[data-article-number="10828141"] > .articleTileV2__link');
     },
+    // "add to cart button": () => {
+    //   return cy.get('[data-testid="addToCartButton"]');
+    // },
   };
 }
 
