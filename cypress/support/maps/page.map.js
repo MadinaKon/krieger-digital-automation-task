@@ -14,8 +14,6 @@ const LoginPage = require("../pages/login.page.js");
 const UserAccountPage = require("../pages/userAccount.page.js");
 const HoeffnerCatalogPage = require("../pages/hoeffner.catalog.js");
 const HoeffnerProductDetailPage = require("../pages/hoeffner.productDetailPage.js");
-// const HoeffnerShoppingCartPage = require("../pages/hoeffner.shoppingCartPage.js");
-
 const HoeffnerShoppingCartPage = require("../pages/hoeffner.shoppingCartPage.js");
 
 cy.pageMap = {};

@@ -43,9 +43,9 @@ Feature: Existing user can buy a product successfully
     And I click the "go to cart button"
 
     
-   # And I am on the "Hoeffner shopping cart page"
-   # And I see that the url matches the "warenkorb" url
+    # And I am on the "Hoeffner shopping cart page"
+    # And I see that the url matches the "warenkorb" url
    # Then I see the "cart overview summary"
 
-  #  And I click the "go to the checkout"
+   And I click the "go to the checkout"
    # And I see that the url matches the "bestellung/login" url
