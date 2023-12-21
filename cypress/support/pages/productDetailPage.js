@@ -7,7 +7,7 @@ class HoeffnerProductDetailPage extends Page {
   }
 
   get path() {
-    return `https://www.hoeffner.de/${this._articleNumber}`;
+    return `/${this._articleNumber}`;
   }
 
   set articleNumber(number) {

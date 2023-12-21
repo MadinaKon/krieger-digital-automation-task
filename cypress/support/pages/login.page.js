@@ -2,7 +2,7 @@ const Page = require("./Page");
 
 class LoginPage extends Page {
   get path() {
-    return `https://www.hoeffner.de/login`;
+    return `/login`;
   }
 
   selectors = {

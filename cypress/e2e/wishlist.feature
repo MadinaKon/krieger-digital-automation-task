@@ -21,7 +21,9 @@ Feature: Existing user can add a product to the wishlist successfully
    # Remove the item from the wishlist
    # Verify the item was removed from the wishlist
 
-   
+   # add product to the cart -> verify that wishlist count was increased by +1 
+   # delete product from the wishlist -> verify that wishlist count was decreased by  1
+
     And I go to the "Hoeffner wishlist page"
     And I type "handtuch" into the "search input field"
     Then I see the "search result text"
@@ -30,16 +32,16 @@ Feature: Existing user can add a product to the wishlist successfully
     # And following products are added to the wishlist
     And product is added to the wishlist
       |ArticleNumber  |
-      | 11823931      |
+      | 11827118      |
 
-    Given I clear the "search input field"
-    And I type "kerze" into the "search input field"
-    Then I see the "search result text"
-    And I should see products in the catalog
-    # And following products are added to the wishlist
-    And product is added to the wishlist
-      |ArticleNumber  |
-      | 10562211      |
+    # Given I clear the "search input field"
+    # And I type "kerze" into the "search input field"
+    # Then I see the "search result text"
+    # And I should see products in the catalog
+    # # And following products are added to the wishlist
+    # And product is added to the wishlist
+    #   |ArticleNumber  |
+    #   | 10562211      |
      
 #   And product is removed from the wishlist
 #       |ArticleNumber  |
@@ -54,3 +56,8 @@ Feature: Existing user can add a product to the wishlist successfully
    # Then I see the "wishlist icon clicked"
   # Then "wishlist icon count" count should be correct
 
+
+   And I click the "visitor login button"
+  #  And I go to the "Hoeffner wishlist page"
+
+ 

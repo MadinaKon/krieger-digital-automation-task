@@ -2,7 +2,7 @@ const Page = require("./Page");
 
 class UserAccountPage extends Page {
   get path() {
-    return `https://www.hoeffner.de/kundenkonto`;
+    return `/kundenkonto`;
   }
 
   selectors = {

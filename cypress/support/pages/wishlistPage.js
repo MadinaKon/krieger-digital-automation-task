@@ -2,7 +2,7 @@ const Page = require("./Page");
 
 class WishlistPage extends Page {
   get path() {
-    return `https://www.hoeffner.de`;
+    return `/`;
   }
 
   //page selectors
@@ -22,11 +22,16 @@ class WishlistPage extends Page {
     "wishlist icon clicked": () => {
       return cy.get(".wishlistIcon--pointer--clicked");
     },
-    // "wishlist icon count": () => {
-    //   return cy.get(
-    //     ".headerBrand__element--wishlist > .headerElement > .headerElement__link > .headerElement__text > .headerElement__status"
-    //   );
-    // },
+
+    "visitor login button": () => {
+      return cy.get('[data-testid="addToWishlistLoginBox"]');
+    },
+
+    "wishlist icon count": () => {
+      return cy.get(
+        ".headerBrand__element--wishlist > .headerElement > .headerElement__link > .headerElement__text > .headerElement__status"
+      );
+    },
   };
 }
 

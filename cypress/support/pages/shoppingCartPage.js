@@ -2,7 +2,7 @@ const Page = require("./Page");
 
 class ShoppingCartPage extends Page {
   get path() {
-    return `https://www.hoeffner.de/warenkorb`;
+    return `/warenkorb`;
   }
 
   //page selectors

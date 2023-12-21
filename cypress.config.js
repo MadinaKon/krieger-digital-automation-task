@@ -25,6 +25,7 @@ module.exports = defineConfig({
       return config;
     },
     specPattern: ["cypress/e2e/**/*.feature"],
+    baseUrl: "https://www.hoeffner.de",
   },
   defaultCommandTimeout: 25000,
   animationDistanceThreshold: 1,
@@ -35,7 +36,7 @@ module.exports = defineConfig({
   numTestsKeptInMemory: 200,
   video: false,
   chromeWebSecurity: false,
-  // hideXHR: true,
+  hideXHR: true,
   watchForFileChanges: false,
   retries: {
     // Configure retry attempts for `cypress run`

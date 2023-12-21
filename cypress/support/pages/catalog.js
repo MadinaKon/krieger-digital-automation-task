@@ -2,7 +2,7 @@ const Page = require("./Page");
 
 class CatalogPage extends Page {
   get path() {
-    return `https://www.hoeffner.de`;
+    return `/`;
   }
 
   //page selectors

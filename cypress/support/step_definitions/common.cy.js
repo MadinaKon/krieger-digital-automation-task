@@ -25,14 +25,14 @@ When(
   }
 );
 
-// When(/^"(.*)" count should be correct/, function (selectorIdentifier) {
-//   cy.log(`selectorIdentifier: ${selectorIdentifier}`);
-//   cy.helper
-//     .getElement(
-//       ".headerBrand__element--wishlist > .headerElement > .headerElement__link > .headerElement__text > .headerElement__status"
-//     )
-//     .should("be.greaterThan", 0);
-// });
+When(/^"(.*)" count should be correct/, function (selectorIdentifier) {
+  cy.log(`selectorIdentifier: ${selectorIdentifier}`);
+  cy.helper
+    .getElement(
+      ".headerBrand__element--wishlist > .headerElement > .headerElement__link > .headerElement__text > .headerElement__status"
+    )
+    .should("be.greaterThan", 0);
+});
 
 When(
   /^I type "(.*)" into the "(.* input field|.* mask|.* dropdown)"?$/,
