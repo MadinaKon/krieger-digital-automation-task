@@ -1,6 +1,6 @@
 const Page = require("./Page");
 
-class HoeffnerWishlistPage extends Page {
+class WishlistPage extends Page {
   get path() {
     return `https://www.hoeffner.de`;
   }
@@ -30,4 +30,4 @@ class HoeffnerWishlistPage extends Page {
   };
 }
 
-module.exports = new HoeffnerWishlistPage();
+module.exports = new WishlistPage();

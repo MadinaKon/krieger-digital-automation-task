@@ -31,9 +31,15 @@ Feature: Existing user can add a product to the wishlist successfully
     And product is added to the wishlist
       |ArticleNumber  |
       | 11823931      |
-      | 11827118      |
-      | 40820295      |
-      |10826445       |
+
+    Given I clear the "search input field"
+    And I type "kerze" into the "search input field"
+    Then I see the "search result text"
+    And I should see products in the catalog
+    # And following products are added to the wishlist
+    And product is added to the wishlist
+      |ArticleNumber  |
+      | 10562211      |
      
 #   And product is removed from the wishlist
 #       |ArticleNumber  |

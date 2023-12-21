@@ -42,6 +42,10 @@ When(
   }
 );
 
+When(/^I clear the "(.*)"/, function (selectorIdentifier) {
+  cy.helper.getElement(selectorIdentifier).clear();
+});
+
 When(/^I am on the "(.* page)"$/, function (pageDescription) {
   const url = cy.pageMap.getPageUrl(pageDescription);
   cy.url().should("contain", url);

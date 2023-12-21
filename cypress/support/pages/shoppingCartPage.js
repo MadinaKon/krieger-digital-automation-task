@@ -1,6 +1,6 @@
 const Page = require("./Page");
 
-class HoeffnerShoppingCartPage extends Page {
+class ShoppingCartPage extends Page {
   get path() {
     return `https://www.hoeffner.de/warenkorb`;
   }
@@ -18,4 +18,4 @@ class HoeffnerShoppingCartPage extends Page {
   };
 }
 
-module.exports = new HoeffnerShoppingCartPage();
+module.exports = new ShoppingCartPage();

@@ -8,26 +8,24 @@
 import { WILD_CARDS } from "../constants.js";
 import WildCard from "../objects/wildcard.js";
 
-const GooglePage = require("../pages/google.page");
-const HoeffnerPage = require("../pages/hoeffner.page.js");
+const Homepage = require("../pages/homepage.js");
 const LoginPage = require("../pages/login.page.js");
 const UserAccountPage = require("../pages/userAccount.page.js");
-const HoeffnerCatalogPage = require("../pages/hoeffner.catalog.js");
-const HoeffnerProductDetailPage = require("../pages/hoeffner.productDetailPage.js");
-const HoeffnerShoppingCartPage = require("../pages/hoeffner.shoppingCartPage.js");
-const HoeffnerWishlistPage = require("../pages/hoeffner.wishlistPage.js");
+const CatalogPage = require("../pages/catalog.js");
+const ProductDetailPage = require("../pages/productDetailPage.js");
+const ShoppingCartPage = require("../pages/shoppingCartPage.js");
+const WishlistPage = require("../pages/wishlistPage.js");
 
 cy.pageMap = {};
 
 const PAGEMAP = {
-  "google page": GooglePage,
-  "Hoeffner home page": HoeffnerPage,
+  "Hoeffner home page": Homepage,
   "Hoeffner login page": LoginPage,
   "Hoeffner account page": UserAccountPage,
-  "Hoeffner catalog page": HoeffnerCatalogPage,
-  "Hoeffner product detail page": HoeffnerProductDetailPage,
-  "Hoeffner shopping cart page": HoeffnerShoppingCartPage,
-  "Hoeffner wishlist page": HoeffnerWishlistPage,
+  "Hoeffner catalog page": CatalogPage,
+  "Hoeffner product detail page": ProductDetailPage,
+  "Hoeffner shopping cart page": ShoppingCartPage,
+  "Hoeffner wishlist page": WishlistPage,
 };
 
 cy.pageMap.getPageByDescription = (pageDescription) => {
