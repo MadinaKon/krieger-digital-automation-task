@@ -24,7 +24,8 @@ class WishlistPage extends Page {
     },
 
     "visitor login button": () => {
-      return cy.get('[data-testid="addToWishlistLoginBox"]');
+      // return cy.get('[data-testid="addToWishlistLoginBox"]');
+      return cy.contains("Anmelden");
     },
 
     "wishlist icon count": () => {

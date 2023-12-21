@@ -136,17 +136,14 @@ When(/^product is removed from the wishlist/, function (dataTable) {
     const selectedProduct = elem.ArticleNumber;
     const getEl = `[data-article-number="${selectedProduct}"] > .articleTileV2__wishlistIcon > .wishlistIcon`;
 
-    cy.get(getEl).click(); // Assuming clicking the same icon removes the product
-    // If the removal action requires a different selector or logic, adjust this accordingly
+    cy.get(getEl).click();
   });
 });
 
 When(
-  /^product "(.*)" to the wishlist is being added/,
+  /^product with article number "(.*)" is listed under the wishlist/,
   function (wishlistNumber) {
-    cy.log(`Clicked on element with identifier: ${wishlistNumber}`);
-
-    const getEl = `[data-wish-list-entry-number="${wishlistNumber}"]`;
-    cy.get(getEl).click();
+    const getEl = `[data-wishlist-entry-id="${wishlistNumber}"]`;
+    cy.get(getEl).should("be.visible");
   }
 );
