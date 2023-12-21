@@ -35,7 +35,7 @@ module.exports = defineConfig({
   numTestsKeptInMemory: 200,
   video: false,
   chromeWebSecurity: false,
-  hideXHR: true,
+  // hideXHR: true,
   watchForFileChanges: false,
   retries: {
     // Configure retry attempts for `cypress run`

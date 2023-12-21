@@ -25,9 +25,19 @@ When(
   }
 );
 
+// When(/^"(.*)" count should be correct/, function (selectorIdentifier) {
+//   cy.log(`selectorIdentifier: ${selectorIdentifier}`);
+//   cy.helper
+//     .getElement(
+//       ".headerBrand__element--wishlist > .headerElement > .headerElement__link > .headerElement__text > .headerElement__status"
+//     )
+//     .should("be.greaterThan", 0);
+// });
+
 When(
   /^I type "(.*)" into the "(.* input field|.* mask|.* dropdown)"?$/,
   function (text, selectorIdentifier) {
+    cy.log(`text ${text} identifier ${selectorIdentifier}`);
     cy.helper.getElement(selectorIdentifier).type(text + "{enter}");
   }
 );
@@ -90,3 +100,49 @@ When(/^following products are added to the cart/, function (dataTable) {
     cy.get(getEl).click();
   });
 });
+
+When(/^product is added to the wishlist/, function (dataTable) {
+  let propValue;
+  dataTable.hashes().forEach((elem) => {
+    for (let propName in elem) {
+      propValue = elem[propName];
+
+      cy.log(propName, propValue);
+    }
+  });
+
+  dataTable.hashes().forEach((elem) => {
+    const selectedProduct = elem.ArticleNumber;
+    const getEl = `[data-article-number="${selectedProduct}"] > .articleTileV2__wishlistIcon > .wishlistIcon`;
+
+    cy.get(getEl).click();
+  });
+});
+
+// When(/^product is added to the wishlist/, function (dataTable) {
+//   dataTable.hashes().forEach((elem) => {
+//     const selectedProduct = elem.ArticleNumber;
+//     const getEl = `[data-article-number="${selectedProduct}"] > .articleTileV2__wishlistIcon > .wishlistIcon`;
+//     cy.get(getEl).click();
+//   });
+// });
+
+When(/^product is removed from the wishlist/, function (dataTable) {
+  dataTable.hashes().forEach((elem) => {
+    const selectedProduct = elem.ArticleNumber;
+    const getEl = `[data-article-number="${selectedProduct}"] > .articleTileV2__wishlistIcon > .wishlistIcon`;
+
+    cy.get(getEl).click(); // Assuming clicking the same icon removes the product
+    // If the removal action requires a different selector or logic, adjust this accordingly
+  });
+});
+
+When(
+  /^product "(.*)" to the wishlist is being added/,
+  function (wishlistNumber) {
+    cy.log(`Clicked on element with identifier: ${wishlistNumber}`);
+
+    const getEl = `[data-wish-list-entry-number="${wishlistNumber}"]`;
+    cy.get(getEl).click();
+  }
+);
