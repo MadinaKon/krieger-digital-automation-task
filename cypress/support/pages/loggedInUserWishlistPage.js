@@ -7,6 +7,13 @@ class LoggedInUserWishlistPage extends Page {
 
   //page selectors
   selectors = {
+    "add all to cart": () => {
+      return cy.get('[data-testid="addAddToWishlist"]');
+    },
+    "continue shopping": () => {
+      return cy.get('[data-testid="goToHome"]');
+    },
+
     // "wishlist icon": () => {
     //   return cy.get(
     //     ".headerBrand__element--wishlist > .headerElement > .headerElement__link > .headerElement__icon"

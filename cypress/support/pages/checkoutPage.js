@@ -10,6 +10,11 @@ class CheckoutPage extends Page {
     "go to the checkout": () => {
       return cy.get('[data-submit-cart="data-submit-cart"]');
     },
+
+    // "go to the checkout": () => {
+    //   return cy.contains("Zur Kasse");
+    // },
+
     "cart overview summary": () => {
       return cy.get(
         ".cartOverview__summaryContainer--desktop > .cartOverview__summaryBox > .summaryBox"

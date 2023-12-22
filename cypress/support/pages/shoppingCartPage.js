@@ -15,9 +15,9 @@ class ShoppingCartPage extends Page {
         ".cartOverview__summaryContainer--desktop > .cartOverview__summaryBox > .summaryBox"
       );
     },
-    // "cart pickup option": () => {
-    //   return cy.get(".cartEntry__pickup");
-    // },
+    "cart pickup option": () => {
+      return cy.get(".cartEntry__pickup");
+    },
   };
 }
 
