@@ -4,10 +4,20 @@ const addCucumberPreprocessorPlugin =
 const browserify = require("@badeball/cypress-cucumber-preprocessor/browserify");
 
 module.exports = defineConfig({
+  reporter: "cypress-mochawesome-reporter",
+  reporterOptions: {
+    reportDir: "cypress/results",
+    reportFilename: "[name].html",
+    overwrite: true,
+    html: true,
+    json: false,
+  },
   viewportWidth: 1920,
   viewportHeight: 1080,
   e2e: {
     async setupNodeEvents(on, config) {
+      require("cypress-mochawesome-reporter/plugin")(on);
+
       on("before:browser:launch", (browser = {}, launchOptions) => {
         // `args` is an array of all the arguments that will
         // be passed to browsers when it launches
@@ -24,6 +34,7 @@ module.exports = defineConfig({
       on("file:preprocessor", browserify.default(config));
       return config;
     },
+
     specPattern: ["cypress/e2e/**/*.feature"],
     baseUrl: "https://www.hoeffner.de",
   },

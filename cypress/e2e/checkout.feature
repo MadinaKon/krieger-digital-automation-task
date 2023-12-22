@@ -31,6 +31,13 @@ Feature: Existing user can buy a product successfully
     # And I am on the "Hoeffner shopping cart page"
     # And I see that the url matches the "warenkorb" url
    # Then I see the "cart overview summary"
+   
+ 
+   And I am on the "Checkout page"
+  # Then I go to the "Checkout page"
 
+
+  
+   And I click the "cart pickup option"
    And I click the "go to the checkout"
    # And I see that the url matches the "bestellung/login" url

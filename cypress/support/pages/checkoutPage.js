@@ -1,6 +1,6 @@
 const Page = require("./Page");
 
-class ShoppingCartPage extends Page {
+class CheckoutPage extends Page {
   get path() {
     return `/warenkorb`;
   }
@@ -15,10 +15,10 @@ class ShoppingCartPage extends Page {
         ".cartOverview__summaryContainer--desktop > .cartOverview__summaryBox > .summaryBox"
       );
     },
-    // "cart pickup option": () => {
-    //   return cy.get(".cartEntry__pickup");
-    // },
+    "cart pickup option": () => {
+      return cy.get(".cartEntry__pickup");
+    },
   };
 }
 
-module.exports = new ShoppingCartPage();
+module.exports = new CheckoutPage();
