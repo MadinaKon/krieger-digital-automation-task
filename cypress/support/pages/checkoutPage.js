@@ -1,3 +1,4 @@
+const { element } = require("prop-types");
 const Page = require("./Page");
 
 class CheckoutPage extends Page {
@@ -5,15 +6,15 @@ class CheckoutPage extends Page {
     return `/warenkorb`;
   }
 
-  //page selectors
+  
   selectors = {
-    "go to the checkout": () => {
-      return cy.get('[data-submit-cart="data-submit-cart"]');
-    },
-
     // "go to the checkout": () => {
-    //   return cy.contains("Zur Kasse");
+    //   return cy.get('[data-submit-cart="data-submit-cart"]');
     // },
+
+    "go to the checkout": () => {
+      return cy.contains("Zur Kasse");
+    },
 
     "cart overview summary": () => {
       return cy.get(

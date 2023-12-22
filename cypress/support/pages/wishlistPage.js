@@ -5,7 +5,6 @@ class WishlistPage extends Page {
     return `/`;
   }
 
-  //page selectors
   selectors = {
     "search input field": () => {
       return cy.get("#searchFieldInputId");

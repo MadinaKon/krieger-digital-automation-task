@@ -14,7 +14,6 @@ class HoeffnerProductDetailPage extends Page {
     this._articleNumber = number;
   }
 
-  //page selectors
   selectors = {
     "add to cart button": () => {
       return cy.get('[data-testid="addToCartButton"]');

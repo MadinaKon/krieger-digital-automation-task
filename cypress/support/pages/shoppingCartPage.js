@@ -5,7 +5,6 @@ class ShoppingCartPage extends Page {
     return `/warenkorb`;
   }
 
-  //page selectors
   selectors = {
     "go to the checkout": () => {
       return cy.get('[data-submit-cart="data-submit-cart"]');

@@ -5,7 +5,6 @@ class LoggedInUserWishlistPage extends Page {
     return `/wunschliste`;
   }
 
-  //page selectors
   selectors = {
     "add all to cart": () => {
       return cy.get('[data-testid="addAddToWishlist"]');
