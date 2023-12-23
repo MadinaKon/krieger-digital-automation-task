@@ -6,17 +6,13 @@ class ShoppingCartPage extends Page {
   }
 
   selectors = {
-    "go to the checkout": () => {
-      // return cy.get('[data-submit-cart="data-submit-cart"]');
-      return cy.contains("Zur Kasse");
-    },
     "cart overview summary": () => {
       return cy.get(
         ".cartOverview__summaryContainer--desktop > .cartOverview__summaryBox > .summaryBox"
       );
     },
-    "cart pickup option": () => {
-      return cy.get(".cartEntry__pickup");
+    "to checkout button": () => {
+      return cy.contains("Zur Kasse");
     },
   };
 }
