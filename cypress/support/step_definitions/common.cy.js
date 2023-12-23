@@ -17,6 +17,14 @@ Then(/^The "(tab title)" is in "(.*)"$/, function (element, language) {
   cy.title().should("eq", expectedValue);
 });
 
+// When(
+//   /^I click the "(.* button|.* input field|.* mask|.* link)"$/,
+//   function (selectorIdentifier) {
+//     cy.log(`Clicked on element with identifier: ${selectorIdentifier}`);
+//     cy.helper.getElement(selectorIdentifier).click({ force: true });
+//   }
+// );
+
 When(
   /^I click the "(.* button|.* input field|.* mask|.* link)"$/,
   function (selectorIdentifier) {

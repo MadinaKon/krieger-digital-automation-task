@@ -1,6 +1,6 @@
 const Page = require("./Page");
 
-class ShoppingCartPage extends Page {
+class CheckoutPage extends Page {
   get path() {
     return `/warenkorb`;
   }
@@ -22,4 +22,4 @@ class ShoppingCartPage extends Page {
   };
 }
 
-module.exports = new ShoppingCartPage();
+module.exports = new CheckoutPage();

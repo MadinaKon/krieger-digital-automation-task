@@ -32,5 +32,7 @@ Feature: Existing user can buy a product successfully
     And I see that the url matches the "warenkorb" url
    # Then I see the "cart overview summary"
 
+    And I am on the "Checkout page"
    # And I click the "cart pickup option radio button"
+    And I see the "cart overview"
     And I click the "to checkout button"
