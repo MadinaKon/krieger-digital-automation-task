@@ -16,7 +16,7 @@ const ProductDetailPage = require("../pages/productDetailPage.js");
 const ShoppingCartPage = require("../pages/shoppingCartPage.js");
 const WishlistPage = require("../pages/wishlistPage.js");
 const LoggedInUserWishlistPage = require("../pages/loggedInUserWishlistPage.js");
-const CheckoutPage = require("../pages/checkoutPage.js");
+const OrderPage = require("../pages/orderPage.js");
 
 cy.pageMap = {};
 
@@ -29,7 +29,7 @@ const PAGEMAP = {
   "Hoeffner shopping cart page": ShoppingCartPage,
   "Hoeffner wishlist page": WishlistPage,
   "Logged in user wishlist page": LoggedInUserWishlistPage,
-  "Checkout page": CheckoutPage,
+  "Order page": OrderPage,
 };
 
 cy.pageMap.getPageByDescription = (pageDescription) => {
