@@ -1,6 +1,4 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import WildCard from "../objects/wildcard";
-import { WILD_CARDS } from "../constants";
 
 When(/^I go to the "(.* page)"$/, function (pageDescription) {
   cy.helper.goto(pageDescription);
@@ -113,7 +111,6 @@ When(/^product is added to the wishlist/, function (dataTable) {
   dataTable.hashes().forEach((elem) => {
     for (let propName in elem) {
       propValue = elem[propName];
-
       cy.log(propName, propValue);
     }
   });
@@ -125,14 +122,6 @@ When(/^product is added to the wishlist/, function (dataTable) {
     cy.get(getEl).click();
   });
 });
-
-// When(/^product is added to the wishlist/, function (dataTable) {
-//   dataTable.hashes().forEach((elem) => {
-//     const selectedProduct = elem.ArticleNumber;
-//     const getEl = `[data-article-number="${selectedProduct}"] > .articleTileV2__wishlistIcon > .wishlistIcon`;
-//     cy.get(getEl).click();
-//   });
-// });
 
 When(/^product is removed from the wishlist/, function (dataTable) {
   dataTable.hashes().forEach((elem) => {
@@ -169,3 +158,15 @@ When(/^I click "(.*)" in the overlay filters/, function (filterName) {
     `#overlayRight > .generalOverlay > .generalOverlay__content > .generalOverlay__text > .filter--right > #${filterName} > .singleFilter__header > .singleFilter__container > .singleFilter__headerState`
   ).click({ force: true });
 });
+
+When(
+  /^I get login credentials from environment variables/,
+  function (dataTable) {
+    for (const {
+      inputField,
+      "environment key": environmentKey,
+    } of dataTable.hashes()) {
+      cy.get(`[data-testid="${inputField}"]`).type(Cypress.env(environmentKey));
+    }
+  }
+);
