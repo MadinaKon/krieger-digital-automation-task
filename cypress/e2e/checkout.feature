@@ -12,8 +12,7 @@ Feature: Existing user can buy a product successfully
   @regression
   Scenario: Add product to the cart from a homepage
    
-    # And I type "s0539452@htw-berlin.de" into the "login email input field"
-    # And I type "j4!2zZrvDhhNX99" into the "login password input field"
+
   #  Then I click the "login submit button"
      And I type "handtuch" into the "search input field"
     Then I see the "search result text"
@@ -36,3 +35,14 @@ Feature: Existing user can buy a product successfully
    # And I click the "cart pickup option radio button"
     And I see the "cart overview"
     And I click the "to checkout button"
+
+    And I am on the "Order page"
+    # And I type "s0539452@htw-berlin.de" into the "login email input field"
+    # And I type "j4!2zZrvDhhNX99" into the "login password input field"
+    # And I click the "login submit button"
+
+    And I click the "guest login button"
+
+
+   # And I am on the "Payment method page"
+     

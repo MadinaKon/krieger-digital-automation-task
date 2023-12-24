@@ -6,15 +6,18 @@ class OrderPage extends Page {
   }
 
   selectors = {
-    "login email input": () => {
+    "login email input field": () => {
       return cy.get('[data-testid="loginEmailInput"]');
     },
-    "login password input": () => {
+    "login password input field": () => {
       return cy.get('[data-testid="loginPasswordInput"]');
     },
 
-    "login submit": () => {
+    "login submit button": () => {
       return cy.get('[data-testid="login-submit"]');
+    },
+    "guest login button": () => {
+      return cy.get('[data-testid="guestLogin"]');
     },
   };
 }
