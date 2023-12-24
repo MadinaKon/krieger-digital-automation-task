@@ -22,25 +22,7 @@ Feature: Existing user can buy a product successfully
     And I see that the url matches the "warenkorb" url
 
     And I am on the "Checkout page"
-   # And I click the "cart pickup option radio button"
     And I see the "cart overview"
     And I click the "cart overview close button"
     And I see the "empty cart text"
-
-    # And I click the "continue browsing button"
-    #  And I am on the "Hoeffner home page"
-
-   # And I click the "to checkout button"
-    # And I am on the "Order page"
-    When I get login credentials from environment variables
-  | inputField               | environment key |
-  | loginEmailInput          | EMAIL           |
-  | loginPasswordInput       | PASSWORD        |
-  
-    # And I click the "login submit button"
-
-    # And I am on the "Payment method page"
-    # And I click the "direct payment button"
-
-   # And I am on the "Payment method page"
      
