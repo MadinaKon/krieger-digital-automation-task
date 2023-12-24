@@ -17,7 +17,7 @@ Feature: Hoeffner Website
 #       | handtuch      |suche?anfrage=handtuch  |
 
        @regression
-  Scenario: User can navigate to Hoeffner website and search for a product
+  Scenario: User can check by category and verify category title name
     And I type "handtuch" into the "search input field"
     Then I see the "search result text"
     Then I see the "main filter"
