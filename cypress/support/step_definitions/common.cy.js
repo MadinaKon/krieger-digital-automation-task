@@ -172,12 +172,7 @@ When(
 );
 
 When(/^I click category overlay filters/, function () {
-  // cy.get('.singleFilter__headerState.filterRight.singleFilter__headerState--closed')
-  // cy.get('.singleFilter__headerSelectedText.filterRight.singleFilter__headerSelectedText--closed')
-  //cy.get(".singleFilter__headerState--open").click();
-
   cy.get(".singleFilter__headerState--closed").first().click();
-  // cy.get(".singleFilter__headerState--closed").click({ multiple: true });
 });
 
 When(/^I click "(.*)" in the overlay filters/, function (filterName) {
