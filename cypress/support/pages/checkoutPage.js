@@ -24,6 +24,10 @@ class CheckoutPage extends Page {
       // return cy.get(".emptyCartOverview__articleList");
       return cy.contains("Ihr Warenkorb ist leer");
     },
+
+    "continue browsing button": () => {
+      return cy.contains("Weiter stöbern");
+    },
   };
 }
 
