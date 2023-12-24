@@ -26,7 +26,7 @@ Then(/^The "(tab title)" is in "(.*)"$/, function (element, language) {
 // );
 
 When(
-  /^I click the "(.* button|.* input field|.* mask|.* link |.* filter)"$/,
+  /^I click the "(.* button|.* input field|.* mask|.* link|.* filter)"$/,
   function (selectorIdentifier) {
     cy.log(`Clicked on element with identifier: ${selectorIdentifier}`);
     cy.helper.getElement(selectorIdentifier).click({ force: true });
