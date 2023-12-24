@@ -19,6 +19,22 @@ class OrderPage extends Page {
     "guest login button": () => {
       return cy.get('[data-testid="guestLogin"]');
     },
+    "salutation select": () => {
+      return cy.get('[data-testid="salutation"]');
+    },
+
+    // cy.get('[data-testid="salutation"]')
+    // cy.get('[data-testid="firstnameInput"]')
+    // cy.get('[data-testid="lastnameInput"]')
+    // cy.get('[data-testid="streetNameInput"]')
+    // cy.get('[data-testid="streetNumberInput"]')
+    // cy.get('[data-testid="addressExtraInput"]')
+    // cy.get('[data-testid="floorInput"]')
+    // cy.get('[data-testid="zipCodeInput"]')
+    // cy.get('[data-testid="townInput"]')
+    // cy.get('[data-testid="emailInput"]')
+
+    // cy.get('[data-testid="address-submit"]')
   };
 }
 

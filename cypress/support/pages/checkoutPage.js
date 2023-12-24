@@ -12,12 +12,17 @@ class CheckoutPage extends Page {
       );
     },
     "to checkout button": () => {
-      // return cy.contains("Zur Kasse");
-      //  return cy.get('[data-submit-cart="data-submit-cart"]');
       return cy.get('[data-submit-cart="data-submit-cart"]').first();
     },
     "cart overview": () => {
       return cy.get(".cartOverview");
+    },
+    "cart overview close button": () => {
+      return cy.get(".cartEntry__closeButton");
+    },
+    "empty cart text": () => {
+      // return cy.get(".emptyCartOverview__articleList");
+      return cy.contains("Ihr Warenkorb ist leer");
     },
   };
 }

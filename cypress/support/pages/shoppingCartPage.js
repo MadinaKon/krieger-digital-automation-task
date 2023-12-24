@@ -11,11 +11,11 @@ class ShoppingCartPage extends Page {
         ".cartOverview__summaryContainer--desktop > .cartOverview__summaryBox > .summaryBox"
       );
     },
-    "to checkout button": () => {
-      // return cy.contains("Zur Kasse");
-      //  return cy.get('[data-submit-cart="data-submit-cart"]');
-      return cy.get('[data-submit-cart="data-submit-cart"]').first();
-    },
+    // "to checkout button": () => {
+    //   // return cy.contains("Zur Kasse");
+    //   //  return cy.get('[data-submit-cart="data-submit-cart"]');
+    //   return cy.get('[data-submit-cart="data-submit-cart"]').first();
+    // },
     "cart overview": () => {
       return cy.get(".cartOverview");
     },

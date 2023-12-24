@@ -9,6 +9,9 @@ class PaymentMethodPage extends Page {
     "login email input field": () => {
       return cy.get('[data-testid="loginEmailInput"]');
     },
+    "direct payment button": () => {
+      return cy.get('[data-testid="directEBankingSubmitPaymentButton"]');
+    },
   };
 }
 
