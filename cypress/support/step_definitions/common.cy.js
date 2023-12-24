@@ -161,3 +161,12 @@ When(
     cy.get(getEl).should("be.visible");
   }
 );
+
+When(
+  /^article title should include category "(.*)"/,
+  function (categoryTitleName) {
+    cy.get(".articleTileV2__name")
+      .invoke("text")
+      .should("include", categoryTitleName);
+  }
+);
