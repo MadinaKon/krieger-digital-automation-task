@@ -6,17 +6,6 @@ When(/^I go to the "(.* page)"$/, function (pageDescription) {
   cy.helper.goto(pageDescription);
 });
 
-Then(/^The "(tab title)" is in "(.*)"$/, function (element, language) {
-  const expectedValue = cy.localization.getLocalizationStringWithWildCards(
-    cy.scope.currentPage,
-    language,
-    element,
-    [new WildCard(WILD_CARDS.ELEMENT_TEXT, Cypress.env("envName"))]
-  );
-  cy.logger.log("Info", `tab title should be [${expectedValue}]`);
-  cy.title().should("eq", expectedValue);
-});
-
 // When(
 //   /^I click the "(.* button|.* input field|.* mask|.* link)"$/,
 //   function (selectorIdentifier) {
