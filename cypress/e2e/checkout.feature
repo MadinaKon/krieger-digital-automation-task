@@ -32,8 +32,11 @@ Feature: Existing user can buy a product successfully
 
    # And I click the "to checkout button"
     # And I am on the "Order page"
-    # And I type "s0539452@htw-berlin.de" into the "login email input field"
-    # And I type "j4!2zZrvDhhNX99" into the "login password input field"
+    When I get login credentials from environment variables
+  | inputField               | environment key |
+  | loginEmailInput          | EMAIL           |
+  | loginPasswordInput       | PASSWORD        |
+  
     # And I click the "login submit button"
 
     # And I am on the "Payment method page"
