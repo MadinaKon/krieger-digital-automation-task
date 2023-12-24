@@ -163,10 +163,25 @@ When(
 );
 
 When(
-  /^article title should include category "(.*)"/,
-  function (categoryTitleName) {
-    cy.get(".articleTileV2__name")
+  /^"(.*)" should include category "(.*)"/,
+  function (categoryTitleName, name) {
+    cy.get(`.articleTileV2__${categoryTitleName}`)
       .invoke("text")
-      .should("include", categoryTitleName);
+      .should("include", name);
   }
 );
+
+When(/^I click category overlay filters/, function () {
+  // cy.get('.singleFilter__headerState.filterRight.singleFilter__headerState--closed')
+  // cy.get('.singleFilter__headerSelectedText.filterRight.singleFilter__headerSelectedText--closed')
+  //cy.get(".singleFilter__headerState--open").click();
+
+  cy.get(".singleFilter__headerState--closed").first().click();
+  // cy.get(".singleFilter__headerState--closed").click({ multiple: true });
+});
+
+When(/^I click "(.*)" in the overlay filters/, function (filterName) {
+  cy.get(
+    `#overlayRight > .generalOverlay > .generalOverlay__content > .generalOverlay__text > .filter--right > #${filterName} > .singleFilter__header > .singleFilter__container > .singleFilter__headerState`
+  ).click({ force: true });
+});

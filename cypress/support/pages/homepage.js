@@ -60,20 +60,30 @@ class Homepage extends Page {
     "prices filter": () => {
       return cy.get('[data-filtertype="prices"]');
     },
-    // brands
-    "brands filter": () => {
-      //  return cy.get('[data-filtertype="prices"]')
+    "prices range start input field": () => {
+      return cy.get('[data-name="startPriceRange"]');
     },
-    "more filters": () => {
+    "prices range end input field": () => {
+      return cy.get('[data-name="endPriceRange"]');
+    },
+    // brands
+    "brands button": () => {
+      return cy.get("#brands > .singleFilter__header");
+    },
+    "more filter": () => {
       return cy.get(".filter__moreFilters");
     },
-    // cy.get('.filter')
-    // cy.get('#categories > .singleFilter__header')
-    // cy.get('#sorting > .singleFilter__header > .singleFilter__container') - cy.get('[data-filtertype="sorting"]')
-    // cy.get('#color > .singleFilter__header') - cy.get('[data-filtertype="colors"]')
-    // cy.get('#prices > .singleFilter__header') - cy.get('[data-filtertype="prices"]')
-    // cy.get('#brands > .singleFilter__header') -
-    // cy.get('.filter__moreFilters')
+    "more filters overlay": () => {
+      return cy.get(
+        "#overlayRight > .generalOverlay > .generalOverlay__content > .generalOverlay__text > .filter--right"
+      );
+    },
+    "overlay category button": () => {
+      //  return cy.contains("Kategorie");
+      return cy.get("#categories");
+    },
+
+    
   };
 }
 
