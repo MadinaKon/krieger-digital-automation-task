@@ -39,18 +39,5 @@ Feature: Existing user can buy a product successfully
     # And I am on the "Payment method page"
     # And I click the "direct payment button"
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
    # And I am on the "Payment method page"
      
