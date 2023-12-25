@@ -38,8 +38,5 @@ Cypress version 13.3.1
 #### Issues and improvements suggestions
 
 # Reporter outputs .json files instead of HTML report, it is a known issue in the plugin, here is a link to the issue
+
 cypress-mochawesome-reporter, version "^3.7.0". It currently generates only JSON files, stored under cypress/e2e/results/.jsons, this issue/ bug is known and is listed under https://github.com/LironEr/cypress-mochawesome-reporter/issues/171
-
-# Logged in user persistency 
-
-
