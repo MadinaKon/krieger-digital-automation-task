@@ -4,14 +4,6 @@ When(/^I go to the "(.* page)"$/, function (pageDescription) {
   cy.helper.goto(pageDescription);
 });
 
-// When(
-//   /^I click the "(.* button|.* input field|.* mask|.* link)"$/,
-//   function (selectorIdentifier) {
-//     cy.log(`Clicked on element with identifier: ${selectorIdentifier}`);
-//     cy.helper.getElement(selectorIdentifier).click({ force: true });
-//   }
-// );
-
 When(
   /^I click the "(.* button|.* input field|.* mask|.* link|.* filter)"$/,
   function (selectorIdentifier) {
@@ -135,6 +127,7 @@ When(/^product is removed from the wishlist/, function (dataTable) {
 When(
   /^product with article number "(.*)" is listed under the wishlist/,
   function (wishlistNumber) {
+    alert(wishlistNumber);
     const getEl = `[data-wishlist-entry-id="${wishlistNumber}"]`;
     cy.get(getEl).should("be.visible");
   }
