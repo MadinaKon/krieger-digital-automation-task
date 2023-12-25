@@ -1,6 +1,8 @@
-## Test Automation Project (A.k.A TAP)
+## Test cases documentation
 
-this project is supposed to be a basis to run automation tests with cypress
+Manual test cases are available under
+
+<https://dusty-bream-905.notion.site/Manual-Test-Cases-for-the-challenge-ed3ac3403c1e479da7f640214b010990>
 
 ## Project Overview
 
