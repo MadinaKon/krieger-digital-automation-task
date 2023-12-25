@@ -21,7 +21,6 @@ class CheckoutPage extends Page {
       return cy.get(".cartEntry__closeButton");
     },
     "empty cart text": () => {
-      // return cy.get(".emptyCartOverview__articleList");
       return cy.contains("Ihr Warenkorb ist leer");
     },
 

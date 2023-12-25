@@ -19,20 +19,20 @@ class Homepage extends Page {
       return cy.get(".filter");
     },
     // categories
-    // "towels checkbox": () => {
-    //   return cy.get('.singleFilter__list--checkBox [data-value="Handtücher"]');
-    // },
-    // "shower towels checkbox": () => {
-    //   return cy.get('.singleFilter__list--checkBox [data-value="Duschtücher"]');
-    // },
-    // "guest towels": () => {
-    //   return cy.get('.singleFilter__list--checkBox [data-value="Gästetücher"]');
-    // },
-    // "wash mitts & soap towels": () => {
-    //   return cy.get(
-    //     '.singleFilter__list--checkBox [data-value="Waschhandschuhe & Seiftücher"]'
-    //   );
-    // },
+    "towels checkbox": () => {
+      return cy.get('.singleFilter__list--checkBox [data-value="Handtücher"]');
+    },
+    "shower towels checkbox": () => {
+      return cy.get('.singleFilter__list--checkBox [data-value="Duschtücher"]');
+    },
+    "guest towels": () => {
+      return cy.get('.singleFilter__list--checkBox [data-value="Gästetücher"]');
+    },
+    "wash mitts & soap towels": () => {
+      return cy.get(
+        '.singleFilter__list--checkBox [data-value="Waschhandschuhe & Seiftücher"]'
+      );
+    },
     "show results button": () => {
       return cy.get(
         "#categories > .singleFilter__content > .singleFilter__closeButton > .button"
@@ -79,11 +79,8 @@ class Homepage extends Page {
       );
     },
     "overlay category button": () => {
-      //  return cy.contains("Kategorie");
       return cy.get("#categories");
     },
-
-    
   };
 }
 

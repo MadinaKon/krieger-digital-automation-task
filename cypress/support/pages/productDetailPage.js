@@ -18,11 +18,6 @@ class HoeffnerProductDetailPage extends Page {
     "add to cart button": () => {
       return cy.get('[data-testid="addToCartButton"]');
     },
-    // "add to cart overlay": () => {
-    //   return cy.get(
-    //     "#overlayRight > .generalOverlay > .generalOverlay__content > .addToCartOverlay"
-    //   );
-    // },
     "go to cart button": () => {
       return cy.contains("Zum Warenkorb");
     },
