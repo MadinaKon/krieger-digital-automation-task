@@ -7,7 +7,7 @@ class UserAccountPage extends Page {
 
   selectors = {
     "account overview headline": () => {
-      return cy.get(".accountOverview__headline > .simpleText");
+      return cy.get(".titleHeadline").should("contain", "Hallo");
     },
   };
 }

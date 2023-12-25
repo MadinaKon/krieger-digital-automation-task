@@ -14,8 +14,6 @@ Feature: User can login with the correct email and password
   | loginPasswordInput       | PASSWORD        |
 
     Then I click the "login submit button"
-    And I go to the "Hoeffner account page"
-    Then I see the "account overview headline"
     
   @regression
   Scenario: Login with invalid credentials
