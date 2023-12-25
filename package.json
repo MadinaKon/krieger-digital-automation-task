@@ -6,7 +6,8 @@
   "scripts": {
     "cy:silent-prod": "npx cypress run --browser chrome",
     "cy:editor-prod": "npx cypress open",
-    "e2e": "cypress open --e2e --browser chrome"
+    "e2e": "cypress open --e2e --browser chrome",
+    "dev": "npx cypress run"
   },
   "repository": {
     "type": "git",
